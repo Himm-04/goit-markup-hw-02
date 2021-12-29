@@ -5,10 +5,13 @@
   --team-color: #f5f4fa;
   --footer-color: #2f303a;
   --white-color: #ffffff;
+  --gray-color: rgba(255, 255, 255, 0.6);
+  --shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  --box-shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-body,
-address {
+body {
   font-family: Roboto, sans-serif;
   color: var(--paragraph-color);
   font-size: 14px;
@@ -33,7 +36,7 @@ address {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: var(--shadow-color);
 }
 
 .logo-header {
@@ -62,12 +65,22 @@ address {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.header-list {
   color: var(--text-color);
 }
+
 .header-link:hover,
 .header-link:focus,
 .current {
   color: var(--accent-color);
+}
+
+.header-links {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 /* HERO */
@@ -98,7 +111,7 @@ address {
   letter-spacing: 0.06em;
   color: var(--white-color);
   background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--box-shadow-color)
   border-radius: 4px;
 }
 
@@ -110,7 +123,7 @@ address {
 }
 
 /* WORK */
-.work-title {
+.section-title {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
@@ -138,6 +151,16 @@ address {
 
 /* MAIN */
 
+.focus {
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
 .main-btn {
   cursor: pointer;
   font-family: Roboto, sans-serif;
@@ -149,7 +172,8 @@ address {
 }
 
 .main-btn:hover,
-.main-btn:focus {
+.main-btn:focus,
+.current-btn {
   background-color: var(--accent-color);
   color: var(--white-color);
 }
@@ -172,16 +196,15 @@ address {
   background: var(--footer-color);
 }
 
+address {
+  font-style: inherit;
+}
 .footer-link {
-  font-style: normal;
   color: var(--team-color);
 }
 
 .footer-after-link {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--gray-color);
 }
 
 .footer-link:hover,
