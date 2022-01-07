@@ -5,10 +5,13 @@
   --team-color: #f5f4fa;
   --footer-color: #2f303a;
   --white-color: #ffffff;
+  --gray-color: rgba(255, 255, 255, 0.6);
+  --shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  --box-shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-body,
-address {
+body {
   font-family: Roboto, sans-serif;
   color: var(--paragraph-color);
   font-size: 14px;
@@ -44,7 +47,30 @@ address {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: var(--shadow-color);
+}
+
+.logo-container {
+  display: flex;
+}
+
+.contact-us-container .list {
+  display: flex;
+  gap: 50px;
+}
+.btn-filter-list .list {
+  display: flex;
+  gap: 8px;
+}
+
+.header-links {
+  display: flex;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .logo-container {
@@ -96,6 +122,9 @@ address {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.header-list {
   color: var(--text-color);
 }
 
@@ -105,6 +134,12 @@ address {
 .header-tel:focus,
 .current {
   color: var(--accent-color);
+}
+
+.header-links {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 /* ABOUT */
@@ -167,23 +202,27 @@ address {
   letter-spacing: 0.06em;
   color: var(--white-color);
   background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--box-shadow-color);
   border-radius: 4px;
 }
 
 /* WORK */
+
 .work-title {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  font-weight: bold;
 }
+
 .work {
   justify-content: center;
   flex-direction: row;
   align-items: center;
 }
+
 .work-list {
   gap: 30px;
   display: flex;
@@ -233,6 +272,16 @@ address {
 
 /* MAIN */
 
+.focus {
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+}
+
 .main-btn {
   border: none;
   cursor: pointer;
@@ -247,7 +296,8 @@ address {
 }
 
 .main-btn:hover,
-.main-btn:focus {
+.main-btn:focus,
+.current-btn {
   background-color: var(--accent-color);
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -280,16 +330,15 @@ address {
   align-items: center;
 }
 
+address {
+  font-style: inherit;
+}
 .footer-link {
-  font-style: normal;
   color: var(--team-color);
 }
 
 .footer-after-link {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--gray-color);
 }
 
 .footer-link:hover,
