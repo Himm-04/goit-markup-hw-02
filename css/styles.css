@@ -19,6 +19,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -26,8 +30,15 @@ body {
   align-items: center;
 }
 
+.section {
+  margin-top: 94px;
+}
+
 .container {
   max-width: 1200px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
 }
 
 .list {
@@ -50,22 +61,57 @@ body {
   text-shadow: var(--shadow-color);
 }
 
+.header {
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  border: 1px solid #ececec;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
 .logo-container {
   display: flex;
 }
 
-.contact-us-container .list {
-  display: flex;
-  gap: 50px;
+.navigation-container {
+  margin-left: 7.8%;
 }
+
 .btn-filter-list .list {
   display: flex;
   gap: 8px;
+  margin-bottom: 34px;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.contact-us-container {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
 }
 
 .header-links {
   display: flex;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  width: 100%;
 }
+
 .header-list {
   display: flex;
   align-items: center;
@@ -113,11 +159,44 @@ body {
   color: var(--accent-color);
 }
 
-.header-links {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+/* PORTFOLIO */
+
+.main-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+.size-btn {
+  padding: 6px 22px;
+}
+
+.main-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 27px;
+  margin-bottom: 94px;
+}
+
+.main-list img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.ret-section {
+  padding-left: 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.link-image {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ABOUT */
 .about {
   display: flex;
@@ -143,10 +222,6 @@ body {
 
 /* HERO */
 
-.main-container {
-  width: 100%;
-}
-
 .hero {
   width: 100%;
   height: 600px;
@@ -171,6 +246,7 @@ body {
 
 .hero-btn {
   cursor: pointer;
+  display: flex;
   font-family: Roboto, sans-serif;
   text-align: center;
   font-size: 16px;
@@ -180,12 +256,11 @@ body {
   background: var(--accent-color);
   box-shadow: var(--box-shadow-color);
   border-radius: 4px;
+  padding: 10px 32px;
+  border: none;
 }
 
 /* WORK */
-.section-title {
-  font-weight: bold;
-}
 
 .work-title {
   font-size: 36px;
@@ -193,18 +268,25 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  font-weight: bold;
+  /* margin-top: 94px; */
 }
+
 .work {
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  display: flex;
 }
+
 .work-list {
   gap: 30px;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  /* margin-top: 50px; */
+  /* margin-bottom: 94px; */
 }
 
 /* TEAM */
@@ -212,6 +294,7 @@ body {
   background: var(--team-color);
   width: 100%;
   height: 648px;
+  padding-bottom: 94px;
 }
 
 .team-item {
@@ -232,6 +315,7 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 30px;
+  padding-left: 0px;
 }
 
 .after-title {
@@ -246,16 +330,28 @@ body {
   text-align: center;
 }
 
+.team-name {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* MAIN */
+
+.main-container {
+  width: 100%;
+}
 
 .focus {
   background-color: var(--accent-color);
+  color: var(--white-color);
   cursor: pointer;
   font-family: Roboto, sans-serif;
   text-align: center;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.62;
   letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
 }
 
 .main-btn {
@@ -267,7 +363,6 @@ body {
   line-height: 1.62;
   letter-spacing: 0.06em;
   color: var(--text-color);
-
   border-radius: 4px;
 }
 
@@ -298,12 +393,17 @@ body {
   width: 100%;
 }
 
+.footer-list {
+  padding-left: 0px;
+}
+
 .footer {
   background: var(--footer-color);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 252px;
 }
 
 address {
