@@ -50,9 +50,10 @@ img {
 }
 
 .container {
-  max-width: 1200px;
-  padding-left: 0px;
-  padding-right: 0px;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .list {
@@ -71,9 +72,9 @@ img {
   font-weight: bold;
   color: var(--accent-color);
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.1923;
   letter-spacing: 0.03em;
-  margin-left: 0;
+  display: block;
   text-shadow: var(--shadow-color);
 }
 
@@ -84,11 +85,6 @@ img {
 .navigation-container {
   color: var(--text-color);
   margin-left: 93px;
-}
-
-.btn-filter-list .list {
-  display: flex;
-  gap: 8px;
 }
 
 .header-list {
@@ -138,22 +134,20 @@ img {
 
 .header-link:hover,
 .header-link:focus,
-.header-tel:hover,
-.header-tel:focus,
 .current {
   color: var(--accent-color);
 }
 
 /* PORTFOLIO */
 
-.portfolio,
-.portfolio-btn {
-  display: flex;
-  justify-content: center;
-}
-
 .size-btn {
   padding: 6px 22px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .ret-section {
@@ -162,35 +156,26 @@ img {
   border-top: none;
 }
 
-.btn-filter-list {
-  padding-top: 94px;
-  padding-bottom: 50px;
-}
-
-.portfolio-container {
-  padding-bottom: 94px;
-}
-
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  padding: 0;
 }
 
 .portfolio-item {
-  padding: 7px;
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc((300% - 270px) / 9);
+  flex-basis: calc(100% / 4 -30px);
+}
+.main-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* ABOUT */
 
 .about {
-  display: flex;
-  justify-content: center;
+  padding-bottom: 0px;
 }
 
 .about-list {
@@ -198,14 +183,12 @@ img {
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  padding: 0;
 }
 
 .about-item {
-  padding: 10px;
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc((100% - 120px) / 4);
+  flex-basis: calc(100% / 4 - 30px);
 }
 
 .about-title {
@@ -213,6 +196,7 @@ img {
   line-height: 1.14;
   color: var(--text-color);
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 /* HERO */
@@ -255,10 +239,6 @@ img {
 
 /* WORK */
 
-.work-container {
-  padding-bottom: 94px;
-}
-
 .setction-title {
   font-size: 36px;
   line-height: 1.16;
@@ -274,18 +254,12 @@ img {
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  padding: 0;
 }
 
 .work-item {
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc((100% - 90px) / 3);
-}
-
-.work {
-  display: flex;
-  justify-content: center;
+  flex-basis: calc(100% / 3 - 30px);
 }
 
 /* TEAM */
@@ -294,34 +268,26 @@ img {
   background: var(--team-color);
 }
 
-.team-item {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-}
-
 .team-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  padding: 0;
 }
 
 .team-item {
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc((100% - 120px) / 4);
-}
-
-.team {
-  display: flex;
-  justify-content: center;
+  flex-basis: calc(100% / 4 - 30px);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
 }
 
 .after-title {
   font-weight: 500;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 .pre-title,
@@ -329,11 +295,10 @@ img {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
-  padding: 5px;
 }
 
 .team-name {
-  margin: 25px;
+  padding: 30px;
 }
 
 /* MAIN */
@@ -377,6 +342,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color);
+  margin-bottom: 4px;
 }
 
 .main-after-title {
@@ -386,23 +352,22 @@ img {
 
 /* FOOTER */
 
-.footer-links {
-  margin: auto;
-}
-
 .footer {
   background: var(--footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-address {
-  font-style: inherit;
-  margin-top: 20px;
+.footer .logo {
+  margin-bottom: 20px;
 }
 
-.footer-item {
-  margin: 9px;
+address {
+  font-style: inherit;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-link {
