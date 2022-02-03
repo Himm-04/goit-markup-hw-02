@@ -9,6 +9,7 @@
   --shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 4px 4px rgba(0, 0, 0, 0.25);
   --box-shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --background-btn: #f5f4fa;
 }
 
 body {
@@ -132,6 +133,11 @@ img {
   align-items: center;
 }
 
+.header-social-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .header-link:hover,
 .header-link:focus,
 .current {
@@ -200,7 +206,14 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--footer-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/background-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -297,6 +310,39 @@ img {
   padding: 30px;
 }
 
+.pre-title {
+  margin-bottom: 16px;
+}
+
+.team-social-item + .team-social-item {
+  margin-left: 10px;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+
+.team-social-icon {
+  fill: currentColor;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
 /* MAIN */
 
 .main-btn {
@@ -308,7 +354,7 @@ img {
   line-height: 1.62;
   letter-spacing: 0.06em;
   color: var(--text-color);
-  background-color: #f5f4fa;
+  background-color: var(--background-btn);
   border-radius: 4px;
   padding: 6px 22px;
 }
@@ -345,6 +391,45 @@ img {
 
 .footer .logo {
   margin-bottom: 20px;
+}
+
+.social-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.social-container {
+  justify-content: center;
+}
+
+.footer-social-item {
+  margin-left: 10px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-icon {
+  fill: currentColor;
 }
 
 address {
